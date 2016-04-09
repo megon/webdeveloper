@@ -3,7 +3,10 @@ DESENVOLVEDOR WEB FRONTEND PLENO
 
 OBJETIVO:
 ---------
-Entregar um projeto Rails rodando, com a página inicial igual ao arquivo docs/pagina.jpg.
+Entregar um projeto Rails rodando com a página inicial igual ao arquivo docs/xxxxxx.jpg.
+
+ATIVIDADES:
+-----------
 Você deverá:
 * fazer um fork desse projeto;
 * acrescentar o Foundation Framework ao projeto base (http://foundation.zurb.com/);
