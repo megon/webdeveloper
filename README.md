@@ -12,7 +12,7 @@ Você deverá:
 * acrescentar o Foundation Framework ao projeto base (http://foundation.zurb.com/);
 * utilizar os assets fornecidos no diretório docs/assets;
 * utilizar a fonte Montserrat do Google Fonts;
-* gerar o HTML para a imagem fornecida em docs/final-project.jpg;
+* gerar o HTML (responsivo, celular, tablet e desktop) para a imagem fornecida em docs/final-project.jpg;
 * acrescentar algumas animações a sua escolha no carregamento dos assets gerados no passo anterior.
 
 Ao finalizar suas alterações, faça um pull request para enviar suas alterações.
