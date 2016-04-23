@@ -1,0 +1,43 @@
+<main>
+  <div class="banner row small-uncollapse">
+    <div class="small-7 columns">
+      <%= image_tag("logo_rayban.png", :class => "banner_logo", :alt => "Ray-Ban Logo") %>
+
+      <h1 class="banner_title">RB2132 901 New Wayfarer</h1>
+      <p class="banner_content">The Ray-Ban&reg; Wayfarer&reg; is simply the most recognizable style in sunglasses. The distinct shape is paired with the traditional Ray-Ban signature logo on the sculpted temples. After its initial design in 1952, the Ray-Ban Wayfarer quickly endeared itself to Hollywood filmmakers, celebrities, musicians and artists, solidifying its iconic status for years to come.</p>
+      <button type="button small" class="button success banner_button banner_button__uppercase">Find out more</button>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="sale-ad small-8 small-offset-1 medium-offset-0 medium-4 columns">
+      <%= image_tag("vans.jpg", :class => "sale-ad_image sale-ad_image_animate", :alt => "Vans sneakers") %>
+      <div class="sale-ad_description">
+        <h2 class="sale-ad_title">Van Doren Authentic</h2>
+        <p class="sale-ad_content">(Parrot / Light Blue)</p>
+        <p class="sale-ad_content">Size: UK9 <%= link_to "[Change]", "#" %></a></p>
+        <h3 class="sale-ad_price">&pound; 54.00</h3>
+        <button type="button" class="button sale-ad_button sale-ad_button__uppercase">Add to basket</button>
+      </div>
+    </div>
+
+    <div class="sales-chart small-8 small-offset-1 medium-offset-0 medium-8 columns">
+      <h2 class="sales-chart_title sales-chart_title__font">Sales This Week</h2>
+      <%= image_tag("chart.png", :class => "sales-chart__animate", :alt => "Our sales chart") %>
+      <div class="sales-chart_description">
+          <div class="columns sales-chart_cell">
+            <p class="sales-chart_data">9,374</p>
+            <p>Sales This Week</p>
+          </div>
+          <div class="columns sales-chart_cell">
+            <p class="sales-chart_data">125,457</p>
+            <p>Total Sales</p>
+          </div>
+          <div class="columns sales-chart_cell">
+            <p class="sales-chart_data">+ 17%</p>
+            <p>Total Income</p>
+          </div>
+      </div>
+    </div>
+  </div>
+</main>

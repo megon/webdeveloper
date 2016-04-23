@@ -1,14 +1,24 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Webdeveloper</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+<html class="no-js" lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce Elements - Your fashion and clothing store</title>
+    <meta name="description" content="Ecommerce Elements - The best men's and women's clothing and accessories.
+    Creative dresses, fashion sneakers, sophisticated sunglasses, stylish jeans, sexy jackets and more."</meta>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= stylesheet_link_tag    'application', "https://fonts.googleapis.com/css?family=Montserrat", 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
 </head>
 <body>
+	<%= render partial: 'shared/header_menu' %>
 
-<%= yield %>
+	<%= yield %>
+
+	<%= render partial: 'shared/footer' %>
 
 </body>
 </html>
