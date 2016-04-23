@@ -1,0 +1,357 @@
+/* Base */
+body {
+    background-color: #FC6445;
+    font-size: 100%;
+}
+
+a {
+    font-weight: bold;
+    color: black;
+}
+
+ul {
+    list-style-type: none;
+}
+
+input:focus {
+    background: transparent;
+    outline: none;
+}
+
+input[type="text"] {
+    border-color: transparent;
+    outline: none;
+    background: transparent;
+}
+
+/* Css drawing - adapted from one-div.com */
+.header_compressed-menu {
+    position: relative;
+    font-size: 10px;
+    width: 3.3em;
+    height: 3.3em;
+    background: #383b3e;
+    border-radius: 0.3em;
+}
+
+.header_compressed-menu:hover {
+    background: #5F5F5F;
+}
+
+.header_compressed-menu::before {
+    content: "";
+    border-top: 0.3em solid #efefef;
+    border-bottom: 0.3em solid #efefef;
+    position: absolute;
+    width: 1.9em;
+    height: 1em;
+    margin: auto;
+    top: .8em;
+    left: 0.7em;
+    border-radius:0.1em;
+}
+
+.header_compressed-menu::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 2.2em;
+    width: 1.9em;
+    height: 0.3em;
+    background: #efefef;
+    left: 0.7em;
+    border-radius:0.1em;
+}
+
+.header_compressed-menu {
+    @media (min-width: 64em) {
+        display: none;
+    }
+}
+
+.search-box_icon {
+    margin-top: 1.5em;
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+    position: relative;
+    width: 1.0em;
+    height: 0.4em;
+    background-color: #808080;
+
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    border-bottom-right-radius: 0.3em;
+    border-top-right-radius: 0.3em;
+}
+
+.search-box_icon::before {
+    border: 0.25em solid #808080;
+    content: "";
+    position: absolute;
+    top: -0.4em;
+    left: -1em;
+    display: inline-block;
+    width: 1.2em;
+    height: 1.3em;
+    border-radius: 50%;
+}
+
+.search-box_icon:hover {
+    background-color: #4B4B4B;
+}
+.search-box_icon:hover:before, {
+    border-color: #4B4B4B;
+}
+
+/* -- Mixins and extensions */
+.container {
+    padding: 1rem;
+    font-size: 0.6rem;
+    font-family: "Montserrat", sans-serif;
+    background-color: #E7E7E7;
+    margin-bottom: 2ch;
+    margin-top: 3ch;
+    -webkit-box-shadow: 0 0 .3em grey;
+    box-shadow: 0 0 .3em grey;
+}
+
+.container_title {
+    font-size: 1rem;
+    @media (min-width: 40em) {
+        font-size: 1.2rem;
+    }
+}
+
+.container_button {
+    font-size: .6rem;
+    @media (min-width: 40em) {
+        font-size: .8rem;
+    }
+}
+
+.container_content {
+    font-size: 0.7rem;
+    @media (min-width: 40em) {
+        font-size: .75rem;
+    }
+}
+
+/* -- Blocks, elements and modifiers */
+.search-box {
+    position: absolute;
+    right: 1em;
+    top: 25%;
+}
+
+.search-box_input {
+    float: right;
+    width: auto;
+}
+
+.header:extend(.container) {
+    position: relative;
+    padding: 1.5rem;
+    font-size: 0.8rem;
+}
+
+.header_title {
+    border-right: thin solid #ADADAD;
+    text-align: center;
+}
+
+.header_menu {
+    display: none;
+    @media (min-width: 64em) {
+        display: flex;
+    }
+}
+
+.header_menu-option {
+    float: left;
+    padding-left: 1.5rem;
+    flex: 1;
+}
+
+.header_menu-option:first-child {
+    text-decoration: underline;
+}
+
+@aside-menu: 30%;
+.aside-menu:extend(.container) {
+    font-size: 1rem;
+    width: @aside-menu;
+    position: fixed;
+    top: 10%;
+    left: -@aside-menu;
+    z-index: 2;
+}
+
+.menu-active .aside-menu {
+    transition: left 1s ease;
+    left: 0;
+}
+
+.aside-menu_option {
+    margin-bottom: 1rem;
+}
+
+.aside-menu_option:first-child {
+    text-decoration: underline;
+}
+
+.screen-overlay {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.7);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    visibility: hidden;
+    z-index: 1;
+}
+
+.menu-active .screen-overlay {
+    visibility: visible;
+}
+
+
+.banner:extend(.container) {
+    background-color: white;
+    background-image: url("hero_banner_small.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    max-height: 500px;
+
+    @media (min-width: 40em) {
+        background-image: url("hero_banner.jpg");
+        background-size: contain;
+        font-size: 0.8rem;
+    }
+}
+
+.banner_title:extend(.container_title) {}
+.banner_content:extend(.container_content) {}
+
+.banner_logo {
+    width: 25%;
+    min-width: 100px;
+}
+
+.banner_button:extend(.container_button) {}
+
+.banner_button__uppercase {
+    text-transform: uppercase;
+}
+
+
+
+
+.sales-chart {
+    position: relative;
+    max-width: 100%;
+    height: 100%;
+}
+
+.sales-chart_description:extend(.container) {
+    margin-top: 0em;
+    margin-bottom: 1em;
+    font-size: .5rem;
+    display: flex;
+    @media (min-width: 64em) {
+        font-size: 1rem;
+    }
+}
+
+.sales-chart_title {
+    position: absolute;
+    left: 2em;
+    top: 1em;
+}
+
+.sales-chart__animate:hover {
+    transform: scale(1.05) rotate(-2deg);
+}
+
+.sales-chart_title__font {
+    font-size: 1em;
+    @media (min-width: 64em) {
+        font-size: 1.5em;
+    }
+    color: white;
+}
+
+.sales-chart_data {
+    font-size: 2em;
+}
+
+
+.sales-chart_cell {
+   text-align: center;
+}
+
+.sales-chart_cell:not(:last-child) {
+    border-right: thin solid #ADADAD;
+}
+
+
+.sale-ad_description:extend(.container) {
+    padding: 1rem;
+    margin-top: 0em;
+    text-align: center;
+    @media (min-width: 40em) {
+        text-align: left;
+    }
+}
+
+.sale-ad_image {
+    width: 100%;
+}
+
+.sale-ad_image_animate:hover {
+    transform: scale(1.05);
+}
+
+.sale-ad_title:extend(.container_title) {}
+
+.sale-ad_content:extend(.container_content) {}
+
+.sale-ad_price {
+    font-size: 1rem;
+    @media (min-width: 60em) {
+        font-size: 2rem;
+        display: inline;
+    }
+}
+.sale-ad_button:extend(.container_button) {
+    @media (min-width: 60em) {
+        float: right;
+    }
+}
+
+.sale-ad_button__uppercase {
+    text-transform: uppercase;
+}
+
+
+
+
+
+.footer:extend(.container) {
+    font-size: 0.8rem;
+    padding: .5rem;
+}
+
+.footer_title {
+    border-right: thin solid #ADADAD;
+    text-align: center;
+}
+
+
+.footer_social-logo {
+    max-height: 1.5rem;
+    margin-right: 1rem;
+}
