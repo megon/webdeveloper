@@ -1,0 +1,42 @@
+$material-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+
+/* Small only */
+@media screen and (max-width: 39.9375em) {
+	/*.menu-main {padding: 1em; border: none;}*/
+	.big-image {width: 95vw;background: url(hero_banner_small.jpg) no-repeat center 0;height: 100%;background-size: contain;position: absolute;}
+	.bigbox-left {position: relative;background-color: white;height: auto;margin: 0;margin-top: 20rem;text-align: center;clear: both;}
+	/*.bigbox-left {position: relative;background-color: white;height: auto;margin: 0;margin-top: 110vh;text-align: center;clear: both;}*/
+	.middle-main{height:auto; margin: 1em 0;}
+	.footer-icons {margin: auto;display: table;}
+	.footer-main {margin: auto;display: table!important;}
+	.middle-button {position: initial;}
+}
+
+/* Medium only */
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+	.top-bar-left {width: 70%!important}
+	/*.menu-elements {float: right; padding: 1em}*/
+	.menu-elements {padding: 1em}
+	.top-bar-right {float: left; width: 30%!important;padding: 0;}
+	.bigbox-left {position: relative;background-color: white;height: auto;margin: 0;text-align: center;clear: both;}
+	.main-image {position: relative;clear: both;margin-bottom: 1em;}
+	.middle-main{height:auto; margin: 1em 0;box-shadow: $material-shadow; webkit-box-shadow: $material-shadow}
+	.big-image {height: 500px;background: url(hero_banner.jpg) no-repeat right 0px center;background-color: white; box-shadow: $material-shadow; webkit-box-shadow: $material-shadow}
+	.middle-left {height: 5em;width: 1px;background-color: gray;float: left;margin: 1em 0;}
+	.middle-right {height: 5em;width: 1px;background-color: gray;float: right;margin: 1em 0;}
+	.middle-button {position: absolute;right: 2em;bottom: 1em;}
+	.top-bar {box-shadow: $material-shadow; webkit-box-shadow: $material-shadow}
+}
+
+/* Large and up */
+@media screen and (min-width: 64em) {
+	.menu-elements {padding-left: 2em;}
+	.bigbox-left {position: absolute;height: 500px;}
+	.main-image {position: relative;clear: both;margin-bottom: 1em;}
+	.middle-main{height: 30em; margin: 2em 1em 0em 1em;box-shadow: $material-shadow; webkit-box-shadow: $material-shadow}
+	.big-image {height: 500px;background: url(hero_banner.jpg) no-repeat right 0px center;background-color: white;box-shadow: $material-shadow; webkit-box-shadow: $material-shadow;}
+	.middle-left {height: 5em;width: 1px;background-color: gray;float: left;margin: 1em 0;}
+	.middle-right {height: 5em;width: 1px;background-color: gray;float: right;margin: 1em 0;}
+	.middle-button {position: absolute;right: 2em;bottom: 1em;}
+	.top-bar {box-shadow: $material-shadow; webkit-box-shadow: $material-shadow}
+}

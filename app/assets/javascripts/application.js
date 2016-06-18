@@ -12,5 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require foundation
 //= require turbolinks
+//= require waypoints.min.js
 //= require_tree .
+
+$(function(){ $(document).foundation(); });

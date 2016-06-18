@@ -12,4 +12,7 @@
  *
  *= require_tree .
  *= require_self
+ *= require foundation_and_overrides
+ *= require animate.css
  */
+.row {max-width: 90rem;}
